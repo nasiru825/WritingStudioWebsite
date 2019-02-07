@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Faq";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>FAQ</h2>
+
+<head>
+    <script src="~/Scripts/disclosureButton.js "></script>
+    <link rel="stylesheet" href="~/Content/disclosure-faq.css ">
+</head>
+<dl class="faq">
+    <dt>
+        <button aria-expanded="false" aria-controls="faq1_desc">
+            What students utilizing the Writing Studio can expect?
+        </button>
+    </dt>
+    <dd>
+        
+            <ul class="desc" id="faq1_desc">
+                <li>To be greeted warmly and treated respectfully by knowledgeable Peer Educators who are competent in composition and rhetoric.</li>
+                <li>To experience a comfortable environment that promotes active learning.</li>
+            </ul>
+       
+    </dd>
+    <dt>
+        <button aria-expanded="false" aria-controls="faq2_desc">
+            Students utilizing the Writing Studio should bring?
+        </button>
+    </dt>
+    <dd>
+       
+            <ul class="desc" id="faq2_desc">
+                <li>A copy of the writing assignment from their instructor.</li>
+                <li>Notes and assignment.</li>
+            </ul>
+    </dd>
+    <dt>
+        <button aria-expanded="false" aria-controls="faq3_desc">
+            How to schedule a appointment?
+        </button>
+    </dt>
+    <dd>
+        <p class="desc" id="faq3_desc">
+            To schedule an appointment or reserve a seat for a writing workshop, click the  button under “Schedule an Appointment” on the homescreen.
+        </p>
+    </dd>
+    <dt>
+        <button aria-expanded="false" aria-controls="faq4_desc">
+            Other Writing Studio sponsored events?
+        </button>
+    </dt>
+    <dd>
+      <ul class="desc" id="faq4_desc">
+          <li>Classroom Visits and Instruction Sessions.</li>
+          <li>Writing Workshops.</li>
+            </ul>
+        
+    </dd>
+</dl>

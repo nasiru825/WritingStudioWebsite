@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "Schedules";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <title>Tutors Schedule</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Tutors Schedule</h2>
+
+        <p>Search for a specific day or time frame</p>
+        <input class="form-control" id="myInput" type="text" placeholder="EX- Monday or Morning">
+        <br>
+        <p>Morning: 9am-12pm</p>
+        <p>Afternoon: 12pm-5pm</p>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Tutors</th>
+                    <th>Available Times</th>
+                    <th>Available Days</th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+                <tr>
+                    <td>Malcolm Smith </td>
+                    <td>Morning , Afternoon </td>
+                    <td>Monday, Tuesday, Wednesday, Thursday</td>
+
+                </tr>
+                <tr>
+                    <td>Avery Petterson</td>
+                    <td>Morning </td>
+                    <td> Thursday, Friday</td>
+                </tr>
+                <tr>
+                    <td>Brittany Brown</td>
+                    <td>Morning </td>
+                    <td>Monday, Tuesday, Wednesday, Thursday</td>
+                </tr>
+                <tr>
+                    <td>Khiara Washington </td>
+                    <td> Afternoon </td>
+                    <td>Monday, Tuesday, Thursday, Friday</td>
+                </tr>
+                <tr>
+                    <td>Ashley Brooks</td>
+                    <td>Morning , Afternoon </td>
+                    <td>Tuesday, Wednesday</td>
+                </tr>
+                <tr>
+                    <td>Mariah Green</td>
+                    <td>Afternoon </td>
+                    <td>Tuesday, Thursday</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+
+    <script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+    </script>
+
+</body>
+

@@ -1,0 +1,75 @@
+﻿
+    @{
+    ViewBag.Title = "Home Page";
+}
+
+<body>
+    <div >
+        <div class="row panel-primary container page-header">
+
+            <h1 class="text-center"> @ViewData["Message"]</h1>
+
+
+
+        </div>
+        <br />
+
+    </div>
+    <div class="container">
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="@Url.Content("~/Content/slide/slide1.jpg")" style="width:100%;height:600px;">
+                </div>
+
+                <div class="item">
+                    <img src="@Url.Content("~/Content/slide/slide2.jpg")" style="width:100%;height:600px;">
+                </div>
+
+                <div class="item">
+                    <img src="@Url.Content("~/Content/slide/slide3.jpg")" style="width:100%;height:600px;">
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <!-- stops -->
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Schedule Appointment</h3>
+            <p>
+                <img src="@Url.Content("~/Content/slide/schedule.jpg")" style="width:40%;height:40%;">
+            </p>
+            <p><a href="@Url.Action("Appointments","Home")" class="btn btn-default elements">Go &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h3>Tutors Schedule</h3>
+
+            <p><br /><img src="@Url.Content("~/Content/slide/tutors.png")" style="width:50%;height:100%;"></p>
+            <p><a href="@Url.Action("Schedules","Home")" class="btn btn-default elements">Go &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h3>FAQ</h3>
+            <p><br /><img src="@Url.Content("~/Content/slide/Faq.jpg")" style="width:50%;height:100%;"></p>
+            <p><a href="@Url.Action("Faq","Home")" class="btn btn-default elements">GO &raquo;</a></p>
+        </div>
+    </div>
+</body>
